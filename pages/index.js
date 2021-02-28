@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Head from 'next/head'
 import db from '../db.json'
 import Widget from '../src/components/Widget'
 import Footer from '../src/components/Footer'
@@ -18,27 +19,32 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-    <QuizBackground backgroundImage={db.bg} >
-      <QuizContainer>
-        <Widget>
-          <Widget.Content>
-            <Widget.Header>
-              <h1>The Legend of Zelda</h1>
-            </Widget.Header>
-            <p>lorem ipsum</p>
-          </Widget.Content>
-        </Widget>
-        <Widget>
-          <Widget.Content>
-            <Widget.Header>
-              <h1>Quiz da galera</h1>
-            </Widget.Header>
-            <p>lorem ipsum</p>
-          </Widget.Content>
-        </Widget>
-        <Footer />
-      </QuizContainer>
-      <GithubCorner projectUrl = '/https://www.github.com/Andre1999Lopes/aluraquiz'/>
-    </QuizBackground>
+    <>
+      <Head>
+        <meta property="og:image" content={db.bg} />
+      </Head>
+      <QuizBackground backgroundImage={db.bg} >
+        <QuizContainer>
+          <Widget>
+            <Widget.Content>
+              <Widget.Header>
+                <h1>The Legend of Zelda</h1>
+              </Widget.Header>
+              <p>lorem ipsum</p>
+            </Widget.Content>
+          </Widget>
+          <Widget>
+            <Widget.Content>
+              <Widget.Header>
+                <h1>Quiz da galera</h1>
+              </Widget.Header>
+              <p>lorem ipsum</p>
+            </Widget.Content>
+          </Widget>
+          <Footer />
+        </QuizContainer>
+        <GithubCorner projectUrl = '/https://www.github.com/Andre1999Lopes/aluraquiz'/>
+      </QuizBackground>
+    </>
   )
 }
