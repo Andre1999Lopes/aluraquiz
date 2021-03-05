@@ -2,8 +2,6 @@
 
 Projeto criado durante a Imersão React NextJS da [Alura](https://www.alura.com.br).
 
-### Comandos disponíveis:
+Para iniciar o projeto em sua máquina, deve-se, após a instalação das dependências necessárias, executar o seguinte comando:
 
-- yarn dev/npm run dev: inicia o projeto em modo de desenvolvedor.
-- yarn build/npm run build: criará a versão de produção do projeto.
-- yarn start/npm run start: inicia a versão de produção do projeto.
+`yarn dev/npm run dev`
