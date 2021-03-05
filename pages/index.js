@@ -40,7 +40,7 @@ export default function Home() {
               <h1>The Legend of Zelda</h1>
             </Widget.Header>
             <Widget.Content>
-              <form onSubmit={function (e) {
+              <form onSubmit={(e) => {
                 e.preventDefault();
                 router.push(`/quiz?name=${name}`);
               }}
