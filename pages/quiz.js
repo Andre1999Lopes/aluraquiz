@@ -5,7 +5,31 @@ import Widget from '../src/components/Widget';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizLogo from '../src/components/QuizLogo';
 import QuizContainer from '../src/components/QuizContainer';
+import AlternativeForm from '../src/components/AlternativeForm';
 import Button from '../src/components/Button';
+import LoadingAnimation from '../src/components/LoadingAnimation';
+
+function ResultWidget({ results }) {
+  return (
+    <Widget>
+      <Widget.Header>
+        Tela de resultado
+      </Widget.Header>
+      <Widget.Content>
+        <p>
+          {`Você acertou ${results.filter((x) => x).length} perguntas!`}
+        </p>
+        <ul>
+          {results.map((result, index) => (
+            <li key={`result_${result}`}>
+              {`#${index + 1} - Resultado: ${result === true ? 'Acertou' : 'Errou'}`}
+            </li>
+          ))}
+        </ul>
+      </Widget.Content>
+    </Widget>
+  );
+}
 
 function LoadingWidget() {
   return (
@@ -13,17 +37,21 @@ function LoadingWidget() {
       <Widget.Header>
         Carregando...
       </Widget.Header>
-      <Widget.Content>
-        Desafio do loading
+      <Widget.Content style={{ display: 'flex', justifyContent: 'center' }}>
+        <LoadingAnimation />
       </Widget.Content>
     </Widget>
   );
 }
 
 function QuestionWidget({
-  question, totalQuestions, questionIndex, onSubmit,
+  question, totalQuestions, questionIndex, onSubmit, addResult,
 }) {
   const questionId = `question_${questionIndex}`;
+  const [selectedAlternative, setSelectedAlternative] = React.useState(undefined);
+  const [isQuestionSubmitted, setIsQuestionSubmitted] = React.useState(false);
+  const isCorrect = selectedAlternative === question.answer;
+  const hasSelectedAlternative = selectedAlternative !== undefined;
 
   return (
     <Widget>
@@ -50,22 +78,34 @@ function QuestionWidget({
           {question.description}
         </p>
 
-        <form onSubmit={(e) => {
+        <AlternativeForm onSubmit={(e) => {
           e.preventDefault();
-          onSubmit();
+          setIsQuestionSubmitted(true);
+          setTimeout(() => {
+            addResult(isCorrect);
+            setIsQuestionSubmitted(false);
+            setSelectedAlternative(undefined);
+            onSubmit();
+          }, 3 * 1000);
         }}
         >
           {question.alternatives.map((alternative, index) => {
             const alternativeId = `alternative_${index}`;
+            const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR';
+            const isSelected = selectedAlternative === index;
             return (
               <Widget.Topic
                 as="label"
+                key={alternativeId}
                 htmlFor={alternativeId}
+                data-selected={isSelected}
+                data-status={isQuestionSubmitted && alternativeStatus}
               >
                 <input
-                  // style={{ display: 'none' }}
+                  style={{ display: 'none' }}
                   type="radio"
                   name={questionId}
+                  onChange={() => setSelectedAlternative(index)}
                   id={alternativeId}
                 />
                 {alternative}
@@ -73,10 +113,13 @@ function QuestionWidget({
             );
           })}
 
-          <Button type="submit">
+          <Button type="submit" disabled={!hasSelectedAlternative}>
             Confirmar
           </Button>
-        </form>
+
+          { isQuestionSubmitted && isCorrect && <p>Você acertou!</p> }
+          { isQuestionSubmitted && !isCorrect && <p>Você errou!</p> }
+        </AlternativeForm>
 
       </Widget.Content>
     </Widget>
@@ -92,9 +135,17 @@ const screenStates = {
 export default function QuizPage() {
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
+  const [results, setResults] = React.useState([]);
   const questionIndex = currentQuestion;
   const question = db.questions[questionIndex];
   const totalQuestions = db.questions.length;
+
+  function addResult(result) {
+    setResults([
+      ...results,
+      result,
+    ]);
+  }
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -121,10 +172,11 @@ export default function QuizPage() {
             totalQuestions={totalQuestions}
             questionIndex={questionIndex}
             onSubmit={handleSubmit}
+            addResult={addResult}
           />
         )}
         {screenState === screenStates.LOADING && <LoadingWidget />}
-        {screenState === screenStates.RESULT && <div>Você acertou X questões</div>}
+        {screenState === screenStates.RESULT && <ResultWidget results={results} />}
       </QuizContainer>
     </QuizBackground>
   );
