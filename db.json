@@ -1,45 +1,50 @@
 {
-  "bg": "https://www.hitalent.co/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMmJDQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1452099b706ad7d079f7a3a4dd5d702ebeeae45f/HiTalent.png",
-  "title": "Quiz JavaScript #AluraQuiz",
-  "description": "Um quiz rápido sobre o mundo do JavaScript",
+  "bg": "https://barbarashdwallpapers.com/wp-content/uploads/2016/03/Gossip-Girl-wallpaper-1.jpg",
+  "title": "Quiz Gossip Girl #AluraQuiz",
+  "description": "Um quiz rápido sobre o mundo de Gossip Girl",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/j5P0DQIOf4PonLi55G/giphy.gif",
-      "title": "Qual a diferença entre = , == e === ?",
-      "description": "Pergunta fácil em!",
-      "answer": 1,
+      "image": "https://static.quizur.com/i/b/57e5a99bf19325.14965884f9fd85c7aa4d26260b29748246a1b70f.jpeg",
+      "title": "Gossip Girl se passa onde?",
+      "description": "Pergunta fácil, hein!",
+      "answer": 2,
       "alternatives": [
-        "São a mesma coisa",
-        "O = significa atribuição de valor. Já == verifica a igualdade do valor, enquanto === verifica valor e tipo de variável."
+        "Nova Orleans",
+        "Rosewood",
+        "Manhattan"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/Ie2Hs3A0uJRtK/giphy.gif",
-      "title": "Que tipos de dados são suportados em JavaScript?",
+      "image": "https://static.quizur.com/i/b/57e59f33d24255.71404253Queen-B-3-blair-waldorf-30436070-500-401.jpg",
+      "title": "Com quem Blair Waldorf namorava no início da série",
       "description": "E agora? Você sabe?",
-      "answer": 0,
+      "answer": 1,
       "alternatives": [
-        "Number, String, Undefined, Null e Bool.",
-        "Int, String, Undefined, Null e Bool."
+        "Louis",
+        "Nate",
+        "Chuck"
+      ]
+    },
+    {
+      "image": "https://tv-fanatic-res.cloudinary.com/iu/s--X3VSign0--/t_full/cs_srgb,f_auto,fl_strip_profile.lossy,q_auto:420/v1371143322/sad-blair.png",
+      "title": "Para onde Blair foi depois de terminar com Nate na primeira temporada?",
+      "description": "Essa só fãs de carteirinha acertam!",
+      "answer": 2,
+      "alternatives": [
+        "Para uma festa",
+        "Para a casa da Serena",
+        "Para o bar de Chuck"
       ]
     },
     {
       "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
-      "title": "Qual a diferença de window e global?",
-      "answer": 1,
+      "title": "Quem Charlie Rogers fingiu ser?",
+      "description": "Nem é difícil, vai!",
+      "answer": 2,
       "alternatives": [
-        "São a mesma coisa",
-        "window é o escopo global no browser, e global no node"
-      ]
-    },
-    {
-      "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
-      "title": "Qual a forma antiga de trabalhar com AJAX na Web?",
-      "answer": 1,
-      "alternatives": [
-        "JSONHttpRequest",
-        "XMLHttpRequest",
-        "fetch"
+        "Amiga de infância de Serena",
+        "Irmã de Serena",
+        "Prima de Serena"
       ]
     }
   ],
@@ -49,9 +54,9 @@
   ],
   "theme": {
     "colors": {
-      "primary": "#222222",
-      "secondary": "#e89c3f",
-      "mainBg": "#213f4e",
+      "primary": "#8f0057",
+      "secondary": "#ffea58",
+      "mainBg": "#ffa6a6",
       "contrastText": "#FFFFFF",
       "wrong": "#FF5722",
       "success": "#4CAF50"
