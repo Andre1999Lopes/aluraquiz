@@ -1,50 +1,50 @@
 {
-  "bg": "https://barbarashdwallpapers.com/wp-content/uploads/2016/03/Gossip-Girl-wallpaper-1.jpg",
-  "title": "Quiz Gossip Girl #AluraQuiz",
-  "description": "Um quiz rápido sobre o mundo de Gossip Girl",
+  "bg": "https://i.pinimg.com/originals/98/67/7e/98677e90349dff1d04519b1cebc0d02a.jpg",
+  "title": "Quiz Shingeki no Kyojin #AluraQuiz",
+  "description": "Um quiz rápido sobre Shingeki no Kyojin",
   "questions": [
     {
-      "image": "https://static.quizur.com/i/b/57e5a99bf19325.14965884f9fd85c7aa4d26260b29748246a1b70f.jpeg",
-      "title": "Gossip Girl se passa onde?",
-      "description": "Pergunta fácil, hein!",
+      "image": "https://img.quizur.com/f/img60451c82cd29b7.42889708.jpg?lastEdited=1615142034",
+      "title": "Em que ano foi lançada a primeira temporada de Shingeki no Kyojin?",
+      "description": "Pra aquecer",
       "answer": 2,
       "alternatives": [
-        "Nova Orleans",
-        "Rosewood",
-        "Manhattan"
+        "2010",
+        "2012",
+        "2013"
       ]
     },
     {
-      "image": "https://static.quizur.com/i/b/57e59f33d24255.71404253Queen-B-3-blair-waldorf-30436070-500-401.jpg",
-      "title": "Com quem Blair Waldorf namorava no início da série",
+      "image": "https://pbs.twimg.com/media/EkSOTDRXcAQpMbH.jpg",
+      "title": "O que significa a fumaça preta na formação de Erwin?",
       "description": "E agora? Você sabe?",
       "answer": 1,
       "alternatives": [
-        "Louis",
-        "Nate",
-        "Chuck"
+        "Avistamento de titã",
+        "Titã anômalo",
+        "Mudança na rota"
       ]
     },
     {
-      "image": "https://tv-fanatic-res.cloudinary.com/iu/s--X3VSign0--/t_full/cs_srgb,f_auto,fl_strip_profile.lossy,q_auto:420/v1371143322/sad-blair.png",
-      "title": "Para onde Blair foi depois de terminar com Nate na primeira temporada?",
+      "image": "https://www.comboinfinito.com.br/principal/wp-content/uploads/2018/09/attack-on-titan-levi.jpg",
+      "title": "Qual era o nome da mãe de Levi?",
       "description": "Essa só fãs de carteirinha acertam!",
       "answer": 2,
       "alternatives": [
-        "Para uma festa",
-        "Para a casa da Serena",
-        "Para o bar de Chuck"
+        "Ilse",
+        "Kuklo",
+        "Kuchel"
       ]
     },
     {
-      "image": "https://static.quizur.com/i/b/57e5a1caf02c35.40193182fbdf58e301a1ae860ecfcc13e1a9f0c7.jpg",
-      "title": "Quem Charlie Rogers fingiu ser?",
+      "image": "https://criticalhits.com.br/wp-content/uploads/2020/06/titã-de-ataque-910x512.png",
+      "title": "Durante a retomada da muralha Rose, o que aconteceu de inesperado no plano?",
       "description": "Nem é difícil, vai!",
-      "answer": 2,
+      "answer": 0,
       "alternatives": [
-        "Amiga de infância de Serena",
-        "Irmã de Serena",
-        "Prima de Serena"
+        "Eren ataca Mikasa",
+        "Eren não consegue se transformar em titã",
+        "Eren é atacado por um titã anômalo"
       ]
     }
   ],
@@ -54,9 +54,9 @@
   ],
   "theme": {
     "colors": {
-      "primary": "#8f0057",
-      "secondary": "#ffea58",
-      "mainBg": "#ffa6a6",
+      "primary": "#774023",
+      "secondary": "#1d0e0b",
+      "mainBg": "#d88c51",
       "contrastText": "#FFFFFF",
       "wrong": "#FF5722",
       "success": "#4CAF50"

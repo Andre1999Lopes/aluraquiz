@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { Lottie } from '@crello/react-lottie';
 import Widget from '../../components/Widget';
 import QuizBackground from '../../components/QuizBackground';
 import QuizLogo from '../../components/QuizLogo';
 import QuizContainer from '../../components/QuizContainer';
 import AlternativeForm from '../../components/AlternativeForm';
 import Button from '../../components/Button';
-import LoadingAnimation from '../../components/LoadingAnimation';
 import BackLinkArrow from '../../components/BackLinkArrow';
+import loadingAnimation from './animationLoading.json';
 
 function ResultWidget({ results }) {
   return (
@@ -39,7 +40,11 @@ function LoadingWidget() {
         Carregando...
       </Widget.Header>
       <Widget.Content style={{ display: 'flex', justifyContent: 'center' }}>
-        <LoadingAnimation />
+        <Lottie
+          width="200px"
+          height="200px"
+          config={{ animationData: loadingAnimation, loop: true, autoplay: true }}
+        />
       </Widget.Content>
     </Widget>
   );
