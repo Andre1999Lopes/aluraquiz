@@ -35,7 +35,7 @@ export default function Home() {
             animate="show"
           >
             <Widget.Header>
-              <h1>Gossip Girl</h1>
+              <h1>Shingeki no Kyojin</h1>
             </Widget.Header>
             <Widget.Content>
               <form onSubmit={(e) => {
